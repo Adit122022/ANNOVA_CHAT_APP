@@ -8,7 +8,7 @@
 
 ## 🚀 Live Preview
 
-🔗 [View Live Application](https://your-live-preview-link.com)
+🔗 [View Live Application]((https://annova-chat-app.onrender.com/))
 
 ---
 
