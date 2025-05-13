@@ -1,5 +1,5 @@
 
-```markdown
+
 # ANNOVA - Real-Time Chat Application
 
 **ANNOVA** is a real-time chat application that allows users to connect, chat, and share messages seamlessly. It features a modern UI, real-time messaging, and customizable themes.
