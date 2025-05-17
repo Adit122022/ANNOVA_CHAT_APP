@@ -10,6 +10,9 @@ router.post('/logout', logout)
 // updating profile routes
 router.put('/update-profile',protect ,updateProfile)
 router.get('/check' , protect, checkAuth)
+router.get('/test', (req,res)=>{
+    res.send("test route is working")
+})
 
 
 export default router
