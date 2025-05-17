@@ -4,7 +4,7 @@ import {app ,server ,io} from './lib/Socket.js'
 import cookieParser from 'cookie-parser';
 //  middelwares bhar vale
 app.use(express.json())
-app.use(cors({origin :process.env.CORS_URL , credentials:true}))
+app.use(cors({origin :'*' , credentials:true}))
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
