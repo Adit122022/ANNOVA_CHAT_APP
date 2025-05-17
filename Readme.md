@@ -6,10 +6,6 @@
 
 ---
 
-
-
----
-
 ## ✨ Features
 
 - **Real-Time Messaging**: Send and receive messages instantly using WebSockets.
