@@ -55,7 +55,6 @@ if(image){
         io.to(receiverSocketId).emit("newMessage" , newMessage);
      }
 // todo : send notification to the receiver of the message
-
 res.status(200).json(newMessage)
     } catch (error) {
         console.log("Send message error  -->", error.message);

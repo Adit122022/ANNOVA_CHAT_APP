@@ -39,7 +39,7 @@ set({isSigningUp:true});
      toast.success("Account created successfully")
         
       } catch (error) {
-        //  console.log("useAuthStore (signup)  ---> ", error.response.data.message)
+         console.log("useAuthStore (signup)  ---> ", error.response.data.message)
          toast.error(error.response.data.message)
         }finally{
         set({isSigningUp: false})
@@ -53,7 +53,7 @@ try {
    toast.success("Logged out successfully");
    get().DisconnectSocket();
 } catch (error) {
-    // console.log("useAuthStore (logout)  ---> ", error.response.data.message)
+    console.log("useAuthStore (logout)  ---> ", error.response.data.message)
     toast.error(error.response.data.message); 
 }
 },
@@ -68,7 +68,7 @@ login:async(data)=>{
     get().connectSocket();
         
       } catch (error) {
-        //  console.log("useAuthStore (signup)  ---> ", error.response.data.message)
+         console.log("useAuthStore (signup)  ---> ", error.response.data.message)
          toast.error(error.response.data.message)
 
         }finally{
@@ -82,7 +82,7 @@ updateProfile: async(data)=>{
         set({authUser : res.data})
          toast.success("Profile updated successfully !")
     } catch (error) {
-         //  console.log("useAuthStore (Update - profile)  ---> ", error.response.data.message)
+          console.log("useAuthStore (Update - profile)  ---> ", error.response.data.message)
          toast.error(error.response.data.message)  
     }finally{
         set({isUpdatingProfile: false})
