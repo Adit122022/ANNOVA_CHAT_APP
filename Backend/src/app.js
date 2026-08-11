@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import config from "./config/config.js";
 import morgan from "morgan";
 
-//  middlewares
+app.set("trust proxy", 1);
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 app.use(express.json());
 app.use(cors({ origin: config.CLIENT_URL, credentials: true }));

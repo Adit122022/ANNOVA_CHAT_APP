@@ -35,11 +35,12 @@ export const signup = async (req, res) => {
    
     if(user) {
         await user.save();
-        generate_Token(user._id ,res);  //this funtion is in utils.js
+        const token = generate_Token(user._id ,res);  //this funtion is in utils.js
            res.status(200).json({_id:user._id,
                fullname:user.fullname,
                email:user.email,
                profilePic:user.profilePic,
+               token,
            });
     }else{
            res.status(400).json({message:"User not created"})
@@ -69,12 +70,13 @@ export const login =async (req, res) => {
                 if (!isPasswordCorrect) {
                     return res.status(400).json({ message: "Invalid credentials" });
                 }
-                generate_Token(user._id ,res);  //this funtion is in utils.js
+                const token = generate_Token(user._id ,res);  //this funtion is in utils.js
                 res.status(200).json({
                     _id:user._id,
                     fullname:user.fullname,
                     email:user.email,
                     profilePic:user.profilePic,
+                    token,
                 });
 
       
