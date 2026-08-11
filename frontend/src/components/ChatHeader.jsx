@@ -22,7 +22,7 @@ const ChatHeader = () => {
           {/* Avatar */}
           <div className="avatar">
             <div className="size-10 rounded-full aspect-square relative">
-              <img src={selectedUser.profilePic || "/avatar.png"} alt={selectedUser.fullname} />
+              <img src={selectedUser.profilePic || "https://i.pinimg.com/736x/fb/03/7f/fb037f5804f567dd455aaa272b1e09f7.jpg"} alt={selectedUser.fullname} />
             </div>
           </div>
 

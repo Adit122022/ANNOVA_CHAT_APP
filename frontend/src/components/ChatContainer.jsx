@@ -25,13 +25,13 @@ const ChatContainer = () => {
     subscribeToMessages();
 
     return () => unsubscribeFromMessages();
-  }, [selectedUser, getMessages , unsubscribeFromMessages ,subscribeToMessages]);
+  }, [selectedUser, getMessages, unsubscribeFromMessages, subscribeToMessages]);
 
   useEffect(() => {
     if (messageEndRef.current && messages) {
       messageEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    
+
     // Set current date from the first message if messages exist
     if (messages && messages.length > 0) {
       const firstMessageDate = formatMessageTime(messages[0].createdAt).date;
@@ -60,10 +60,10 @@ const ChatContainer = () => {
             <span>{currentDate}</span>
           </div>
         </div>
-        
+
         {messages.map((message) => {
           const formattedTime = formatMessageTime(message.createdAt);
-          
+
           return (
             <div
               key={message._id}
@@ -75,8 +75,8 @@ const ChatContainer = () => {
                   <img
                     src={
                       message.senderId === authUser._id
-                        ? authUser.profilePic || "/avatar.png"
-                        : selectedUser.profilePic || "/avatar.png"
+                        ? authUser.profilePic || "https://i.pinimg.com/736x/fb/03/7f/fb037f5804f567dd455aaa272b1e09f7.jpg"
+                        : selectedUser.profilePic || "https://i.pinimg.com/736x/fb/03/7f/fb037f5804f567dd455aaa272b1e09f7.jpg"
                     }
                     alt="profile pic"
                     className="w-10 h-10 sm:w-12 sm:h-12"  // Responsive image size
