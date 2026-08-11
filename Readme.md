@@ -6,6 +6,22 @@
 
 ---
 
+## 📸 Screenshots
+
+<br>
+
+<div align="center">
+
+| **Chat Panel** | **Settings (Themes)** |
+|:---:|:---:|
+| <!-- Chat screenshot placeholder - replace path below --> <img src="frontend/public/web-chat.png" width="400px" alt="ANNOVA Chat Panel"> | <!-- Settings/Themes screenshot placeholder - replace path below --> <img src="frontend/public/web-settings.png" width="400px" alt="ANNOVA Themes Settings"> |
+| Real-time messaging interface. | Multiple customizable UI themes. |
+
+</div>
+
+---
+---
+
 ## ✨ Features
 
 - **Real-Time Messaging**: Send and receive messages instantly using WebSockets.
