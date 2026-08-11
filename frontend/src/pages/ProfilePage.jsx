@@ -82,21 +82,21 @@ const ProfilePage = () => {
             </p>
           </div>
 
-          <div className="space-y-6 px-12">
-            <div className="space-y-1.5  flex justify-between px-5 bg-base-200 rounded-lg border">
+          <div className="space-y-4 px-4 sm:px-12">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-4 py-3 bg-base-200 rounded-lg border">
               <div className="text-sm text-zinc-400 flex items-center gap-2">
                 <User className="w-4 h-4" />
                 Full Name
               </div>
-              <p className="px-4 py-2.5 ">{authUser?.fullname}</p>
+              <p className="font-medium sm:px-4">{authUser?.fullname}</p>
             </div>
 
-            <div className="space-y-1.5 flex justify-between px-5 bg-base-200 rounded-lg border">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-4 py-3 bg-base-200 rounded-lg border">
               <div className="text-sm text-zinc-400 flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 Email Address
               </div>
-              <p className="px-4 py-2.5 ">{authUser?.email}</p>
+              <p className="font-medium sm:px-4 break-all">{authUser?.email}</p>
             </div>
           </div>
 

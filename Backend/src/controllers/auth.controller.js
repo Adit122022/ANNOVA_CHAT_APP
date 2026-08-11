@@ -45,7 +45,8 @@ export const signup = async (req, res) => {
            res.status(400).json({message:"User not created"})
     }
   } catch (error) {
-    console.log("Signup error  -->"  , error.message )
+    console.log("Signup error -->", error.message);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
 
