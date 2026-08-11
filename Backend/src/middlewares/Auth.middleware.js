@@ -5,19 +5,32 @@ export const protect = async (req, res, next) => {
   try {
     const token = req.cookies.jwt;
 
+    const clearAuthCookie = () => {
+      const isProduction = process.env.NODE_ENV === "production";
+      res.cookie("jwt", "", {
+        maxAge: 0,
+        httpOnly: true,
+        secure: isProduction,
+        sameSite: isProduction ? "none" : "lax",
+      });
+    };
+
     if (!token) {
+      clearAuthCookie();
       return res.status(401).json({ message: "Unauthorized - No token provided" });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     if (!decoded) {
+      clearAuthCookie();
       return res.status(401).json({ message: "Unauthorized - Invalid token" });
     }
 
     const user = await User.findById(decoded.id).select("-password");
 
     if (!user) {
+      clearAuthCookie();
       return res.status(401).json({ message: "Unauthorized - User not found" });
     }
 
